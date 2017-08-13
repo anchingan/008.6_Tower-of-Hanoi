@@ -24,12 +24,12 @@ public class TowerOfHanoi {
 		else if (no % 2 == 0) {
 			towersOfHanoi((no - 1), from, temp, to);
 			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
-			towersOfHanoi((no - 1), from, to, temp);
+			towersOfHanoi((no - 1), temp, to, from);
 		}
 		else {
-			towersOfHanoi((no - 1), from, to, temp);
-			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
 			towersOfHanoi((no - 1), from, temp, to);
+			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
+			towersOfHanoi((no - 1), temp, to, from);
 		}
 	}
 
