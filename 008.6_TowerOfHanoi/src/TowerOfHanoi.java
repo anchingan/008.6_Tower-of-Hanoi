@@ -21,11 +21,6 @@ public class TowerOfHanoi {
 	public static void towersOfHanoi(int no, int from, int to, int temp) {
 		if (no == 1)
 			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
-		else if (no % 2 == 0) {
-			towersOfHanoi((no - 1), from, temp, to);
-			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
-			towersOfHanoi((no - 1), temp, to, from);
-		}
 		else {
 			towersOfHanoi((no - 1), from, temp, to);
 			System.out.printf("Move no.%d plate from %d to %d.\n", no, from, to);
